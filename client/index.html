@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>REST HTTP/1.1 API</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <div class="header">
+
+            <h1>REST HTTP/1.1 API</h1>
+
+            <p class="subtitle">
+                User Management API
+            </p>
+
+        </div>
+
+
+        <!-- API Buttons -->
+        <div class="buttons">
+
+            <button onclick="getUsers()">
+                GET Users
+            </button>
+
+            <button onclick="getUser()">
+                GET User by ID
+            </button>
+
+            <button onclick="createUser()">
+                POST User
+            </button>
+
+            <button onclick="updateUser()">
+                PUT User
+            </button>
+
+            <button onclick="deleteUser()">
+                DELETE User
+            </button>
+
+        </div>
+
+
+        <!-- API Response -->
+        <div class="result-box">
+
+            <h2>API Response</h2>
+
+
+            <!-- Request Information -->
+            <div class="request-info">
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Method
+                    </span>
+
+                    <span id="method" class="value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Endpoint
+                    </span>
+
+                    <span id="endpoint" class="value">
+                        -
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Status
+                    </span>
+
+                    <span id="status" class="value">
+                        No request made yet
+                    </span>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <span class="label">
+                        Response Time
+                    </span>
+
+                    <span id="responseTime" class="value">
+                        -
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- JSON Response -->
+            <div class="json-section">
+
+                <h3>
+                    JSON Response
+                </h3>
+
+                <pre id="result">
+No response yet.
+                </pre>
+
+            </div>
+
+        </div>
+
+
+        <!-- API Information -->
+        <div class="api-info">
+
+            <h2>
+                Available REST Endpoints
+            </h2>
+
+            <div class="endpoint-list">
+
+                <div>
+                    <strong>GET</strong>
+                    <span>/users</span>
+                    <small>Get all users</small>
+                </div>
+
+                <div>
+                    <strong>GET</strong>
+                    <span>/users/:id</span>
+                    <small>Get user by ID</small>
+                </div>
+
+                <div>
+                    <strong>POST</strong>
+                    <span>/users</span>
+                    <small>Create new user</small>
+                </div>
+
+                <div>
+                    <strong>PUT</strong>
+                    <span>/users/:id</span>
+                    <small>Update user</small>
+                </div>
+
+                <div>
+                    <strong>DELETE</strong>
+                    <span>/users/:id</span>
+                    <small>Delete user</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+<!-- ==========================================
+     gRPC vs REST Comparison
+========================================== -->
+
+<div class="comparison-box">
+
+    <h2>Project 2 vs Project 3</h2>
+
+    <div class="comparison-grid">
+
+        <!-- gRPC -->
+        <div class="comparison-card">
+
+            <h3>Project 2 - gRPC</h3>
+
+            <p>
+                <strong>Protocol:</strong>
+                HTTP/2
+            </p>
+
+            <p>
+                <strong>Communication:</strong>
+                RPC
+            </p>
+
+            <p>
+                <strong>Data Format:</strong>
+                Protocol Buffers
+            </p>
+
+            <p>
+                <strong>Methods:</strong>
+                Remote Procedure Calls
+            </p>
+
+            <p>
+                <strong>Typical Use:</strong>
+                Service-to-Service Communication
+            </p>
+
+        </div>
+
+
+        <!-- REST -->
+        <div class="comparison-card">
+
+            <h3>Project 3 - REST</h3>
+
+            <p>
+                <strong>Protocol:</strong>
+                HTTP/1.1
+            </p>
+
+            <p>
+                <strong>Communication:</strong>
+                REST API
+            </p>
+
+            <p>
+                <strong>Data Format:</strong>
+                JSON
+            </p>
+
+            <p>
+                <strong>Methods:</strong>
+                GET, POST, PUT, DELETE
+            </p>
+
+            <p>
+                <strong>Typical Use:</strong>
+                Web APIs and Client Applications
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
